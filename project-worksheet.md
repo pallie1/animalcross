@@ -2,16 +2,24 @@
 
 ## Project Links
 
-- [add your github repo link]()
+- [Github repo link](https://github.com/pallie1/project2reactAllie)
 - [add your deployment link]()
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This will be a recipe search for people with allergies.
 
 ## API
 
 Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
+
+I will either be using TheMealDB or Edamam. TheMealDB has an API key=1 that they let anyone use for free. Edamam looks better, but I can't log into their site to request an API key. Hopefully they get back to me soon.
+
+https://www.themealdb.com/api.php
+
+example of TheMealDM json = https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+
+https://developer.edamam.com/edamam-docs-recipe-api
 
 
 ```
