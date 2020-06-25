@@ -7,23 +7,29 @@
 
 ## Project Description
 
-This will be a recipe search for people with allergies.
+This is a site where you can look up information about the bugs and fish in the game Animal Crossings.
 
 ## API
 
-Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
+ACNH is the REST API I'm using. It was actually my second choice, but the API I wanted to use has closed off API key requests. ACHN doesn't require authentification keys. Below is an example of the data this API returns.
 
-I will either be using TheMealDB or Edamam. TheMealDB has an API key=1 that they let anyone use for free. Edamam looks better, but I can't log into their site to request an API key. Hopefully they get back to me soon.
-
-https://www.themealdb.com/api.php
-
-example of TheMealDM json = https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
-
-https://developer.edamam.com/edamam-docs-recipe-api
+Here's a link to the documentation: https://acnhapi.com/doc 
 
 
 ```
-{data: {} }
+{
+"id": 1,
+"file-name": "bitterling",
+"name": {},
+"availability": {},
+"shadow": "Smallest (1)",
+"price": 900,
+"price-cj": 1350,
+"catch-phrase": "I caught a bitterling! It's mad at me, but only a little.",
+"museum-phrase": "Bitterlings hide their eggs inside large bivalves—like clams—where the young can stay safe until grown. The bitterling isn't being sneaky. No, their young help keep the bivalve healthy by eating invading parasites! It's a wonderful bit of evolutionary deal making, don't you think? Each one keeping the other safe... Though eating parasites does not sound like a happy childhood... Is that why the fish is so bitter?",
+"image_uri": "https://acnhapi.com/v1/images/fish/1",
+"icon_uri": "https://acnhapi.com/v1/icons/fish/1"
+}
 ```
 
 
