@@ -37,8 +37,8 @@ Here's a link to the documentation: https://acnhapi.com/doc
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [add link to your wireframes]()
-- [react architecture](https://imgur.com/a/IohUrhk)
+- [add link to your wireframes](https://i.imgur.com/3jOxP12.png)
+- [react architecture](https://i.imgur.com/mpHPiRZ.png)
 
 
 ### MVP/PostMVP & Time Tracker
