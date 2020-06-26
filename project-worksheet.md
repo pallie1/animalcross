@@ -38,7 +38,7 @@ Here's a link to the documentation: https://acnhapi.com/doc
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
 - [add link to your wireframes]()
-- [add link to your react architecture]()
+- [react architecture](https://imgur.com/a/IohUrhk)
 
 
 ### MVP/PostMVP & Time Tracker
@@ -58,7 +58,6 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Show all Critters | This will display all of the critters in a grid format| 
 | Single Critter | Display one critter's information | 
 | Search | Type in a critter's name and pull up a single critter | 
-| 404  | Critter not found page | 
 | Months filter | Click a month to see which critter's are active | 
 
 
