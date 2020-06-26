@@ -41,7 +41,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 - [add link to your react architecture]()
 
 
-### MVP/PostMVP - 5min
+### MVP/PostMVP & Time Tracker
 
 [Please see this Google Sheets for my time/priority matrix.](https://docs.google.com/spreadsheets/d/e/2PACX-1vSBAB-1Z6zPF7iHdsZdZYaANFCbnBckTij17FF0pg7X0UCbtP7Msj3922x-wb3p5D8bFvoOpCI-CWO4/pubhtml)
 
@@ -55,18 +55,16 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | App | This will make the initial data pull and include React Router| 
 | Header | This will render the header include the nav | 
 | Footer | This will render the header include the nav | 
+| Show all Critters | This will display all of the critters in a grid format| 
+| Single Critter | Display one critter's information | 
+| Search | Type in a critter's name and pull up a single critter | 
+| 404  | Critter not found page | 
+| Months filter | Click a month to see which critter's are active | 
 
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
-
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+ ReactStrap
 
 ## Code Snippet
 
