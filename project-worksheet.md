@@ -39,7 +39,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 - [mobile wireframe](https://i.imgur.com/3jOxP12.png)
 - [desktop wireframe](https://i.imgur.com/jOHjJ8c.png)
-- [react architecture](https://i.imgur.com/mpHPiRZ.png)
+- [react architecture](https://i.imgur.com/xWxbAGH.png)
 
 
 ### MVP/PostMVP & Time Tracker
