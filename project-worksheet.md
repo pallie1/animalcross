@@ -43,16 +43,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### MVP EXAMPLE
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
-
-#### PostMVP EXAMPLE
-
-- Add localStorage or firebase for storage
+[Please see this Google Sheets for my time/priority matrix.](https://docs.google.com/spreadsheets/d/e/2PACX-1vSBAB-1Z6zPF7iHdsZdZYaANFCbnBckTij17FF0pg7X0UCbtP7Msj3922x-wb3p5D8bFvoOpCI-CWO4/pubhtml)
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
