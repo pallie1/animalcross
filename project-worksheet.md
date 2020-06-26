@@ -7,7 +7,7 @@
 
 ## Project Description
 
-This is a site where you can look up information about the bugs and fish in the game Animal Crossings.
+This is a site where you can look up information about the bugs and fish in the game Animal Crossings. [This is my reference.](https://critterpedia-plus.mutoo.im/#/discovery/insects)
 
 ## API
 
