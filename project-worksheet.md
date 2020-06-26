@@ -37,7 +37,8 @@ Here's a link to the documentation: https://acnhapi.com/doc
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [add link to your wireframes](https://i.imgur.com/3jOxP12.png)
+- [mobile wireframe](https://i.imgur.com/3jOxP12.png)
+- [desktop wireframe](https://i.imgur.com/jOHjJ8c.png)
 - [react architecture](https://i.imgur.com/mpHPiRZ.png)
 
 
@@ -63,7 +64,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 
 ## Additional Libraries
- ReactStrap
+ React-bootsrap
 
 ## Code Snippet
 
