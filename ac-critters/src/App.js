@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Components/Search';
+// import Search from './Components/Search';
 import Home from './Components/Home/Home'
 import Critters from './Components/Critters/Critters';
 import SingleCrit from './Components/SingleCrit/SingleCrit';
@@ -23,7 +23,7 @@ function App() {
           </Nav.Item>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" />
           <Button variant="success">Search</Button>
         </Form>
         {/* <Search /> */}
