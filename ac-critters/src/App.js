@@ -3,17 +3,31 @@ import Search from './Components/Search';
 import Home from './Components/Home/Home'
 import Critters from './Components/Critters/Critters';
 import Footer from './Components/Footer/Footer';
-import { Link, Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav'
+import Form from 'react-bootstrap/Form'
+import FormControl from 'react-bootstrap/FormControl'
+import Button from 'react-bootstrap/Button'
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <Link to='/'>AC Critters</Link>
-        <Link to='/critters'>Critters</Link>
-        <Search />
-      </nav>
+      <Navbar id='nav' variant="dark" >
+      <Navbar.Brand href="/">AC Critters</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Item>
+            <Nav.Link href='/critters'>Critters</Nav.Link>
+          </Nav.Item>
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Button variant="success">Search</Button>
+        </Form>
+        {/* <Search /> */}
+     
+      </Navbar>
       <main>
         <Switch>
           <Route exact path='/' component={Home} />
