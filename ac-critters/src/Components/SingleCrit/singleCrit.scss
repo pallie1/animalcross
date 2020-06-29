@@ -1,3 +1,5 @@
+
+
 .singleCritContainer {
     display: flex;
     // background-color: tan;
@@ -9,6 +11,7 @@
     z-index: 5;
     position: relative;
     top: 20px;
+    width: 100vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -24,5 +27,8 @@
         z-index: 5;
         position: relative;
         top: 20px;
+        width: 80vw;
+        margin-left: 10vw;
+        margin-bottom: 10vh;
     }
 }

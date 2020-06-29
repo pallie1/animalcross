@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SingleCrit from '../SingleCrit/SingleCrit';
 
 import './critters.scss';
@@ -41,9 +41,10 @@ const Critters = () => {
     const allCrittersValues = Object.values(dataObj).map((element, index) => {
         return (
             <div  key={index}>
-                {/* <Link to={'/critter/' + element.index}> */}
-                    <img onClick={ () => handleClick(element)} src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
-                {/* </Link> */}
+                <Link to={'/' + element['file-name']}>
+                {/* onClick={ () => handleClick(element)} */}
+                    <img  src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
+                </Link>
             </div>
         )
     })
@@ -53,7 +54,7 @@ const Critters = () => {
     return (
         <>
             <h1>Critters!</h1>
-            <SingleCrit clickData={clickData} />
+            {/* <SingleCrit clickData={clickData} /> */}
             <div className='all-critters-grid'>
                 {allCrittersValues}
             </div>

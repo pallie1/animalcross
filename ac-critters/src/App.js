@@ -2,7 +2,7 @@ import React from 'react';
 import Search from './Components/Search';
 import Home from './Components/Home/Home'
 import Critters from './Components/Critters/Critters';
-// import SingleCrit from './Components/SingleCrit/SingleCrit';
+import SingleCrit from './Components/SingleCrit/SingleCrit';
 import Footer from './Components/Footer/Footer';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
@@ -33,9 +33,9 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/critters' component={Critters} />
-          {/* <Route 
-          exact path='/critter/:singleCrit' 
-          render={routerProps => <SingleCrit {...routerProps} />}/> */}
+          <Route 
+          exact path='/:singleCrit' 
+          render={routerProps => <SingleCrit {...routerProps} />}/>
 
           <Route path='*' render={() => <Redirect to='/'/>}/>
         </Switch>
