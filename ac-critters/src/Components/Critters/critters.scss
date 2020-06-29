@@ -1,0 +1,16 @@
+
+
+div {
+
+    .all-critters-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // border: 1px solid black;
+    }
+
+    .crittersBorder {
+        border: 1px solid black;
+    }
+
+}
