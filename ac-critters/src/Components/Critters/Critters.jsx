@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
 import SingleCrit from '../SingleCrit/SingleCrit';
-// import SingleCrit from './Components/SingleCrit/SingleCrit';
+
 import './critters.scss';
 
 
@@ -39,18 +40,23 @@ const Critters = () => {
 
     const allCrittersValues = Object.values(dataObj).map((element, index) => {
         return (
-            <img onClick={ () => handleClick(element)} src={element.icon_uri} alt={element.name[0]} key={index} className='crittersBorder' />
+            <div  key={index}>
+                {/* <Link to={'/critter/' + element.index}> */}
+                    <img onClick={ () => handleClick(element)} src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
+                {/* </Link> */}
+            </div>
         )
     })
-    console.log(allCrittersValues)
+    console.log('allCritersValues - ', allCrittersValues)
+    console.log('clickData from Critters - ', clickData)
             
     return (
         <>
             <h1>Critters!</h1>
+            <SingleCrit clickData={clickData} />
             <div className='all-critters-grid'>
                 {allCrittersValues}
             </div>
-            <SingleCrit clickData={clickData} />
         </>
     )
    
