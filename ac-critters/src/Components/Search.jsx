@@ -11,12 +11,13 @@ export default function Search(props) {
         console.log('handleChange clicked', event.target.value)
         const userInput = event.target.value;
         setInput(userInput);
+        props.onSubmitFromApp(input);
     }
 
     const handleSubmit = event => {
         event.preventDefault();
         console.log('handleSubmit clicked')
-        props.onSubmitFromApp(input);
+        // props.onSubmitFromApp(input);
         // console.log('search side props.onSubmitFromApp - ', props.onSubmitFromApp)
         setInput("")
     }
@@ -24,8 +25,6 @@ export default function Search(props) {
 
     return (
         <>
-            {/* onSubmitFromApp={handleSubmit} */}
-            {/* <form onSubmit={handleSubmit}> */}
             <Link to='/search'>
                 <Form inline  >
                     <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" value={input} onChange={handleChange} />
@@ -34,12 +33,6 @@ export default function Search(props) {
                  
                 </Form>
                 </Link>
-            {/* </form> */}
-{/*  
-            <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Find a critter' onChange={handleChange} value={input} />
-                <button type='submit'>SUBMIT</button>
-            </form> */}
          </>
     ) 
    

@@ -22,8 +22,10 @@ export default function SuggestionList(props) {
 
 
     const allCrittersValues = Object.values(dataObj).map((element, index) => {
-        console.log('values element - ', element)
-        if (element['file-name'] === props.wordFromSearch) {
+        // console.log('values element - ', element)
+        // if (element['file-name'] === props.wordFromSearch) {
+        for (let i=0; i<element['file-name'].length; i++) {
+        if (element['file-name'].indexOf(props.wordFromSearch) > -1) {
             console.log('matched')
             return (
 
@@ -33,8 +35,36 @@ export default function SuggestionList(props) {
                 </Link>
             </div>
             )
-        } else {return null}
+        } 
+        // else if (element['file-name'] === props.wordFromSearch) {
+        //     return (
+
+        //         <div  key={index}>
+        //         <Link to={'/' + element['file-name']}>
+        //             <img  src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
+        //         </Link>
+        //     </div>
+        //     )}
+         
+        else {return null}
+    }
     })
+
+    // // worrking version. this is before I messed with it
+    // const allCrittersValues = Object.values(dataObj).map((element, index) => {
+    //     console.log('values element - ', element)
+    //     if (element['file-name'] === props.wordFromSearch) {
+    //         console.log('matched')
+    //         return (
+
+    //             <div  key={index}>
+    //             <Link to={'/' + element['file-name']}>
+    //                 <img  src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
+    //             </Link>
+    //         </div>
+    //         )
+    //     } else {return null}
+    // })
 
             
     return (
