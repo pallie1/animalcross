@@ -44,7 +44,10 @@ const SingleCrit = props => {
             <div className='singleCritContainer'>
                 <h1>{splitName}</h1>
                 <img src={singleCrit.image_uri} alt={singleCrit.name} />
-                <p>{singleCrit['museum-phrase']}</p>
+                <div className='imgBlurb'>
+                    <img src='https://i.imgur.com/IwwgqIP.png' alt='Blathers' />
+                    <p>{singleCrit['museum-phrase']}</p>
+                </div>
                 {/* <p>Where is it? {singleCrit.availability.location}</p> */}
                 <p>Price: {singleCrit.price} Bells</p>
                 <p>Flick's price: {singleCrit['price-flick']} Bells</p>

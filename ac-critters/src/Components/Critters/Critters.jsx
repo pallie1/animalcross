@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SingleCrit from '../SingleCrit/SingleCrit';
+// import SingleCrit from '../SingleCrit/SingleCrit';
 
 import './critters.scss';
 
@@ -22,11 +22,11 @@ const Critters = () => {
     }, []);
 
 
-    const handleClick = (element) => {
-        // console.log("I've been clicked", element)
-        setClickData([element])
-        // setClickNameKey(element)
-    }
+    // const handleClick = (element) => {
+    //     // console.log("I've been clicked", element)
+    //     setClickData([element])
+    //     // setClickNameKey(element)
+    // }
 
 
     // const allCrittersKeys = Object.keys(dataObj).map((element, index) => {

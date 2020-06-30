@@ -1,18 +1,28 @@
-import React from 'react';
-// import Search from './Components/Search';
+import React, { useState } from 'react';
+import Search from './Components/Search';
 import Home from './Components/Home/Home'
 import Critters from './Components/Critters/Critters';
 import SingleCrit from './Components/SingleCrit/SingleCrit';
 import Footer from './Components/Footer/Footer';
+import SuggestionList from './Components/SuggestionList/SuggestionList';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
-import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
+// import Form from 'react-bootstrap/Form'
+// import FormControl from 'react-bootstrap/FormControl'
+// import Button from 'react-bootstrap/Button'
 import './App.scss';
 
 function App() {
+
+const [wordFromSearch, setWordFromSearch] = useState("");
+
+const handleSubmit = userWord => {
+  setWordFromSearch(userWord)
+} 
+
+console.log('app side -', wordFromSearch)
+
   return (
     <div className="App">
       <Navbar id='nav' variant="dark" >
@@ -22,11 +32,11 @@ function App() {
             <Nav.Link href='/critters'>Critters</Nav.Link>
           </Nav.Item>
         </Nav>
-        <Form inline>
+        {/* <Form inline onSubmitFromApp={handleSubmit} >
           <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" />
           <Button variant="success">Search</Button>
-        </Form>
-        {/* <Search /> */}
+        </Form> */}
+        <Search onSubmitFromApp={handleSubmit} />
      
       </Navbar>
       <main>
@@ -35,7 +45,11 @@ function App() {
           <Route exact path='/critters' component={Critters} />
           <Route 
           exact path='/:singleCrit' 
-          render={routerProps => <SingleCrit {...routerProps} />}/>
+          render={routerProps => <SingleCrit {...routerProps} />} />
+          {/* {wordFromSearch.length>2 ? <Route expact path='/search' render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} /> : null} */}
+          <Route 
+          exact path='/search' 
+          render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
 
           <Route path='*' render={() => <Redirect to='/'/>}/>
         </Switch>
