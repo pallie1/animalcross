@@ -15,7 +15,7 @@ function App() {
 const [wordFromSearch, setWordFromSearch] = useState("");
 
 const handleSubmit = userWord => {
-  console.log('userword - ', userWord)
+  // console.log('userword - ', userWord)
   setWordFromSearch(userWord)
 } 
 
@@ -44,14 +44,14 @@ console.log('app side -', wordFromSearch)
   
           {/* {wordFromSearch.length>2 ? <Route expact path='/search' render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} /> : null} */}
           <Route 
-           path='/search' 
+           exact path='/search' 
           render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
 
           <Route 
           exact path='/:singleCrit' 
           render={routerProps => <SingleCrit {...routerProps} />} />
 
-          <Route path='*' render={() => <Redirect to='/'/>}/>
+          {/* <Route path='*' render={() => <Redirect to='/'/>}/> */}
         </Switch>
       </main>
       <Footer />
