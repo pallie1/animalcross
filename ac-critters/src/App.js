@@ -8,9 +8,6 @@ import SuggestionList from './Components/SuggestionList/SuggestionList';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
-// import Form from 'react-bootstrap/Form'
-// import FormControl from 'react-bootstrap/FormControl'
-// import Button from 'react-bootstrap/Button'
 import './App.scss';
 
 function App() {
@@ -18,6 +15,7 @@ function App() {
 const [wordFromSearch, setWordFromSearch] = useState("");
 
 const handleSubmit = userWord => {
+  console.log('userword - ', userWord)
   setWordFromSearch(userWord)
 } 
 
@@ -43,13 +41,15 @@ console.log('app side -', wordFromSearch)
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/critters' component={Critters} />
+  
+          {/* {wordFromSearch.length>2 ? <Route expact path='/search' render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} /> : null} */}
+          <Route 
+           path='/search' 
+          render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
+
           <Route 
           exact path='/:singleCrit' 
           render={routerProps => <SingleCrit {...routerProps} />} />
-          {/* {wordFromSearch.length>2 ? <Route expact path='/search' render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} /> : null} */}
-          <Route 
-          exact path='/search' 
-          render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
 
           <Route path='*' render={() => <Redirect to='/'/>}/>
         </Switch>
