@@ -29,8 +29,8 @@ export default function Search(props) {
         <>
             <Link to='/search' className='noUnderline'>
                 <Form inline  >
-                    <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" value={input} onChange={handleChange} />
-                        <Button onClick={handleSubmit} style={{cursor:'pointer'}} variant="success" type='submit' >Search</Button>
+                    <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" value={input} onChange={handleChange} onBlur={handleChange}/>
+                        <Button onClick={handleSubmit} variant="success" type='submit' >Search</Button>
                 </Form>
             </Link>
          </>
