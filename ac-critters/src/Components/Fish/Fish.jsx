@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import SingleCrit from '../SingleCrit/SingleCrit';
-
-import './critters.scss';
 
 
-const Critters = () => {
 
-    const [dataObj, setDataObj] = useState("");
-    const [clickData, setClickData] = useState([]);
-    // const [clickNameKey, setClickNameKey] = useState("");
+
+
+const Fish = () => {
+
+    const [dataObjFish, setDataObjFish] = useState("");
+
 
     useEffect( () => {
-        let allUrl = `https://acnhapi.com/v1/bugs/`;
+        let allUrl = `https://acnhapi.com/v1/fish/`;
         const makeApiCall = async () => {
             const response = await fetch(allUrl);
             const json = await response.json();
-            setDataObj(json);
+            setDataObjFish(json);
         }
         makeApiCall();
     }, []);
   
 
-    const allCrittersValues = Object.values(dataObj).map((element, index) => {
+    const allFishValues = Object.values(dataObjFish).map((element, index) => {
         return (
             <div  key={index}>
                 <Link to={'/' + element['file-name']}>
@@ -32,15 +31,13 @@ const Critters = () => {
             </div>
         )
     })
-    console.log('allCritersValues - ', allCrittersValues)
-    console.log('clickData from Critters - ', clickData)
+    console.log('allFishValues - ', allFishValues)
             
     return (
         <>
-            <h1>Critters!</h1>
-            {/* <SingleCrit clickData={clickData} /> */}
+            <h1>Fish!</h1>
             <div className='all-critters-grid'>
-                {allCrittersValues}
+                {allFishValues}
             </div>
         </>
     )
@@ -48,4 +45,4 @@ const Critters = () => {
 }
 
 
-export default Critters
+export default Fish

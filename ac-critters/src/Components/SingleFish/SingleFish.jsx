@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import './singleCrit.scss';
 
 
-const SingleCrit = props => {
 
-    const [singleCrit, setSingleCrit] = useState("");
+const SingleFish = props => {
+
+    const [singleFish, setSingleFish] = useState("");
     const[name, setName] = useState("")
     // console.log('location props - ', props.location.pathname)
 
     
     let path = props.location.pathname;
-        console.log('location props - ', props)
+        console.log('location props - ', props.location)
 
 
 
     // if (props.location) {
     useEffect(() => {
-        let newUrl = `https://acnhapi.com/v1/bugs${path}`;
+        let newUrl = `https://acnhapi.com/v1/fish${path}`;
         const makeApiCall = async () => {
             const response = await fetch(newUrl);
             const json = await response.json();
-            setSingleCrit(json);
+            setSingleFish(json);
             setName(json.name)
         }
         makeApiCall();
@@ -43,14 +43,14 @@ const SingleCrit = props => {
     return (
             <div className='singleCritContainer'>
                 <h1>{splitName}</h1>
-                <img src={singleCrit.image_uri} alt={singleCrit.name} />
+                <img src={singleFish.image_uri} alt={singleFish.name} />
                 <div className='imgBlurb'>
                     <img src='https://i.imgur.com/IwwgqIP.png' alt='Blathers' />
-                    <p>{singleCrit['museum-phrase']}</p>
+                    <p>{singleFish['museum-phrase']}</p>
                 </div>
                 {/* <p>Where is it? {singleCrit.availability.location}</p> */}
-                <p>Price: {singleCrit.price} Bells</p>
-                <p>Flick's price: {singleCrit['price-flick']} Bells</p>
+                <p>Price: {singleFish.price} Bells</p>
+                {/* <p>Flick's price: {singleFish['price-flick']} Bells</p> */}
 {/* //                 <p>Rarity: {clickData[0].availability.rarity}</p>  */} 
 
 
@@ -60,7 +60,7 @@ const SingleCrit = props => {
 }
 
 
-export default SingleCrit
+export default SingleFish
 
 
 // import React from 'react';

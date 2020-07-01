@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Search from './Components/Search';
 import Home from './Components/Home/Home'
 import Critters from './Components/Critters/Critters';
+import Fish from './Components/Fish/Fish';
 import SingleCrit from './Components/SingleCrit/SingleCrit';
+import SingleFish from './Components/SingleFish/SingleFish';
 import Footer from './Components/Footer/Footer';
 import SuggestionList from './Components/SuggestionList/SuggestionList';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -29,6 +31,9 @@ console.log('app side -', wordFromSearch)
           <Nav.Item>
             <Nav.Link href='/critters'>Critters</Nav.Link>
           </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href='/fish'>Fish</Nav.Link>
+          </Nav.Item>
         </Nav>
         {/* <Form inline onSubmitFromApp={handleSubmit} >
           <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" />
@@ -41,7 +46,7 @@ console.log('app side -', wordFromSearch)
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/critters' component={Critters} />
-  
+          <Route exact path='/fish' component={Fish} />
           {/* {wordFromSearch.length>2 ? <Route expact path='/search' render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} /> : null} */}
           <Route 
            exact path='/search' 
@@ -50,6 +55,10 @@ console.log('app side -', wordFromSearch)
           <Route 
           exact path='/:singleCrit' 
           render={routerProps => <SingleCrit {...routerProps} />} />
+
+          <Route 
+          exact path='/:singleFish' 
+          render={routerProps => <SingleFish {...routerProps} />} />
 
           {/* <Route path='*' render={() => <Redirect to='/'/>}/> */}
         </Switch>
