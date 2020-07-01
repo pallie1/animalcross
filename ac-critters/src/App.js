@@ -7,7 +7,7 @@ import SingleCrit from './Components/SingleCrit/SingleCrit';
 import SingleFish from './Components/SingleFish/SingleFish';
 import Footer from './Components/Footer/Footer';
 import SuggestionList from './Components/SuggestionList/SuggestionList';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
 import './App.scss';
@@ -32,7 +32,7 @@ console.log('app side -', wordFromSearch)
             <Nav.Link href='/critters'>Critters</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href='/fish'>Fish</Nav.Link>
+            <Link to='/fish'>Fish</Link>
           </Nav.Item>
         </Nav>
         <Search onSubmitFromApp={handleSubmit} />
