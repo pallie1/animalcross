@@ -26,7 +26,7 @@ console.log('app side -', wordFromSearch)
   return (
     <div className="App">
       <Navbar id='nav' variant="dark" >
-      <Link className='nav-brand' to='/'>AC Critters</Link>
+      <Link className='nav-brand' to='/project2reactAllie/'>AC Critters</Link>
         <Nav className="mr-auto">
           <Nav.Item>
             <Link to='/critters'>Critters</Link>
@@ -40,7 +40,7 @@ console.log('app side -', wordFromSearch)
       </Navbar>
       <main>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/project2reactAllie/' component={Home} />
           <Route exact path='/critters' component={Critters} />
           <Route exact path='/fish' component={Fish} />
           <Route 
