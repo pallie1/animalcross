@@ -26,7 +26,7 @@ console.log('app side -', wordFromSearch)
   return (
     <div className="App">
       <Navbar id='nav' variant="dark" >
-      <Navbar.Brand href="/">AC Critters</Navbar.Brand>
+      <Navbar.Brand className='nav-brand' href="/">AC Critters</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Item>
             <Nav.Link href='/critters'>Critters</Nav.Link>
@@ -35,10 +35,6 @@ console.log('app side -', wordFromSearch)
             <Nav.Link href='/fish'>Fish</Nav.Link>
           </Nav.Item>
         </Nav>
-        {/* <Form inline onSubmitFromApp={handleSubmit} >
-          <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" />
-          <Button variant="success">Search</Button>
-        </Form> */}
         <Search onSubmitFromApp={handleSubmit} />
      
       </Navbar>
@@ -53,14 +49,14 @@ console.log('app side -', wordFromSearch)
           render={(routerProps) => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
 
           <Route 
-          exact path='/:singleCrit' 
-          render={routerProps => <SingleCrit {...routerProps} />} />
+          exact path='/:singlePath' 
+          render={routerProps => 
+            <> 
+              <SingleCrit {...routerProps} />  
+              <SingleFish {...routerProps} /> 
+            </> 
+          }/>
 
-          <Route 
-          exact path='/:singleFish' 
-          render={routerProps => <SingleFish {...routerProps} />} />
-
-          {/* <Route path='*' render={() => <Redirect to='/'/>}/> */}
         </Switch>
       </main>
       <Footer />

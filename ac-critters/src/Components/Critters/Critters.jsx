@@ -25,6 +25,7 @@ const Critters = () => {
     const allCrittersValues = Object.values(dataObj).map((element, index) => {
         return (
             <div  key={index}>
+                {/* <Link to={'/' + element['file-name']}> */}
                 <Link to={'/' + element['file-name']}>
                 {/* onClick={ () => handleClick(element)} */}
                     <img  src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />

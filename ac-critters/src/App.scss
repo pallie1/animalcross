@@ -1,7 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=IBM+Plex+Sans:wght@300;500&family=Open+Sans');
+
 .App {
   text-align: center;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+h1 {
+  font-family: 'Bree Serif', serif;
 }
 
 
@@ -22,4 +31,8 @@
 #nav {
   background-color: #1f6317;
   box-shadow: 0 8px 6px -6px black;
+}
+
+.nav-brand {
+  font-family: 'Bree Serif', serif;
 }

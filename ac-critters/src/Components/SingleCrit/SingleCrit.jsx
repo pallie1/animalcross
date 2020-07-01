@@ -6,15 +6,11 @@ const SingleCrit = props => {
 
     const [singleCrit, setSingleCrit] = useState("");
     const[name, setName] = useState("")
-    // console.log('location props - ', props.location.pathname)
 
     
     let path = props.location.pathname;
         console.log('location props - ', props)
 
-
-
-    // if (props.location) {
     useEffect(() => {
         let newUrl = `https://acnhapi.com/v1/bugs${path}`;
         const makeApiCall = async () => {
@@ -37,8 +33,6 @@ const SingleCrit = props => {
 
 
     console.log('splitName - ', splitName)
-  
-
  
     return (
             <div className='singleCritContainer'>
@@ -48,12 +42,9 @@ const SingleCrit = props => {
                     <img src='https://i.imgur.com/IwwgqIP.png' alt='Blathers' />
                     <p>{singleCrit['museum-phrase']}</p>
                 </div>
-                {/* <p>Where is it? {singleCrit.availability.location}</p> */}
-                <p>Price: {singleCrit.price} Bells</p>
-                <p>Flick's price: {singleCrit['price-flick']} Bells</p>
-{/* //                 <p>Rarity: {clickData[0].availability.rarity}</p>  */} 
-
-
+                <p><strong>Where is it? </strong> {singleCrit.availability.location}</p>
+                <p><strong>Price: </strong>{singleCrit.price} Bells (Flick's price: {singleCrit['price-flick']} Bells)</p>
+                <p><strong>Rarity: </strong>{singleCrit.availability.rarity}</p>  
             </div>
     )} else {return null}
 
