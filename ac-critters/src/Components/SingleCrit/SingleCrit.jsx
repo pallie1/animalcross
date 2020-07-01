@@ -23,6 +23,7 @@ const SingleCrit = props => {
     },[])
 
 
+
         if (name) {
             let firstNameInObj = Object.values(name)
             let splitName = firstNameInObj[0].split("")

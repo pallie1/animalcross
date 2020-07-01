@@ -36,12 +36,10 @@ export default function SuggestionList(props) {
 
     const allCrittersValues = Object.values(dataObjCrit).map((element, index) => {
         // console.log('values element - ', element)
-        // if (element['file-name'] === props.wordFromSearch) {
         for (let i=0; i<element['file-name'].length; i++) {
             if (props.wordFromSearch.length === 0 || props.wordFromSearch.length === 1) {
                 return null
             } else if (element['file-name'].indexOf(props.wordFromSearch) > -1) {
-                console.log('matched')
                 return (
                     <div  key={index}>
                         <Link to={'/' + element['file-name']}>
@@ -55,13 +53,10 @@ export default function SuggestionList(props) {
 
 
     const allFishValues = Object.values(dataObjFish).map((element, index) => {
-        // console.log('values element - ', element)
-        // if (element['file-name'] === props.wordFromSearch) {
         for (let i=0; i<element['file-name'].length; i++) {
             if (props.wordFromSearch.length === 0 || props.wordFromSearch.length === 1) {
                 return null
             } else if (element['file-name'].indexOf(props.wordFromSearch) > -1) {
-                console.log('matched')
                 return (
                     <div  key={index}>
                         <Link to={'/' + element['file-name']}>
