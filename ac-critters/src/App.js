@@ -26,10 +26,10 @@ console.log('app side -', wordFromSearch)
   return (
     <div className="App">
       <Navbar id='nav' variant="dark" >
-      <Navbar.Brand className='nav-brand' to="/">AC Changed</Navbar.Brand>
+      <Link className='nav-brand' to='/'>AC Critters</Link>
         <Nav className="mr-auto">
           <Nav.Item>
-            <Nav.Link to='/critters'>Critters</Nav.Link>
+            <Link to='/critters'>Critters</Link>
           </Nav.Item>
           <Nav.Item>
             <Link to='/fish'>Fish</Link>
