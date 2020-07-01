@@ -41,8 +41,8 @@ console.log('app side -', wordFromSearch)
       <main>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/critters' render={Critters} />
-          <Route exact path='/fish' render={Fish} />
+          <Route exact path='/critters' component={Critters} />
+          <Route exact path='/fish' component={Fish} />
           <Route 
            exact path='/search' 
           render={routerProps => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
