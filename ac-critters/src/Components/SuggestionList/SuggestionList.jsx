@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function SuggestionList(props) {
 
-    console.log('suggestion list - ', props.wordFromSearch.length)
-
-
+    // console.log('suggestion list - ', props.wordFromSearch.length)
     
     const [dataObjCrit, setDataObjCrit] = useState("");
     const [dataObjFish, setDataObjFish] = useState("");
@@ -31,7 +29,7 @@ export default function SuggestionList(props) {
         makeApiCall();
     }, []);
 
-    console.log('dataObjCrit - ', dataObjCrit)
+    // console.log('dataObjCrit - ', dataObjCrit)
 
 
     const allCrittersValues = Object.values(dataObjCrit).map((element, index) => {

@@ -10,7 +10,6 @@ export default function Search(props) {
     const [input, setInput] = useState("");
 
     const handleChange = event => {
-        console.log('handleChange clicked', event.target.value)
         const userInput = event.target.value;
         setInput(userInput);
         props.onSubmitFromApp(input);
@@ -18,18 +17,20 @@ export default function Search(props) {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log('handleSubmit clicked')
-        // props.onSubmitFromApp(input);
-        // console.log('search side props.onSubmitFromApp - ', props.onSubmitFromApp)
         setInput("")
     }
-// console.log('input - ', input)
 
     return (
         <>
             <Link to='/search' className='noUnderline'>
                 <Form inline  >
-                    <FormControl type="text" placeholder="Find a critter" className="mr-sm-2" value={input} onChange={handleChange} onBlur={handleChange}/>
+                    <FormControl 
+                    type="text" 
+                    placeholder="Find a critter" 
+                    className="mr-sm-2" 
+                    value={input} 
+                    onChange={handleChange} 
+                    onBlur={handleChange}/>
                         <Button onClick={handleSubmit} variant="success" type='submit' >Search</Button>
                 </Form>
             </Link>

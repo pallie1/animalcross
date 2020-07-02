@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
-
-
-
 const Fish = () => {
 
     const [dataObjFish, setDataObjFish] = useState("");
@@ -25,7 +22,6 @@ const Fish = () => {
         return (
             <div  key={index}>
                 <Link to={'/' + element['file-name']}>
-                {/* onClick={ () => handleClick(element)} */}
                     <img  src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
                 </Link>
             </div>

@@ -8,7 +8,7 @@ const SingleFish = props => {
     const[name, setName] = useState("")
     
     let path = props.location.pathname;
-        console.log('location props - ', props.location)
+        // console.log('location props - ', props.location)
 
     useEffect(() => {
         let newUrl = `https://acnhapi.com/v1/fish${path}`;

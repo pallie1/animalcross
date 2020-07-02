@@ -5,7 +5,6 @@ import Critters from './Components/Critters/Critters';
 import Fish from './Components/Fish/Fish';
 import SingleCrit from './Components/SingleCrit/SingleCrit';
 import SingleFish from './Components/SingleFish/SingleFish';
-import Footer from './Components/Footer/Footer';
 import SuggestionList from './Components/SuggestionList/SuggestionList';
 import { Switch, Route, Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
@@ -17,11 +16,8 @@ function App() {
 const [wordFromSearch, setWordFromSearch] = useState("");
 
 const handleSubmit = userWord => {
-  // console.log('userword - ', userWord)
   setWordFromSearch(userWord)
 } 
-
-console.log('app side -', wordFromSearch)
 
   return (
     <div className="App">
@@ -57,7 +53,6 @@ console.log('app side -', wordFromSearch)
           }/>          
         </Switch>
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }
