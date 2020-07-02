@@ -8,7 +8,7 @@ const SingleFish = props => {
     const[name, setName] = useState("")
     
     let path = props.location.pathname;
-        // console.log('location props - ', props.location)
+    let wikiURL = `https://animalcrossing.fandom.com/wiki${path}`
 
     useEffect(() => {
         let newUrl = `https://acnhapi.com/v1/fish${path}`;
@@ -40,7 +40,7 @@ const SingleFish = props => {
                 <p><strong>Where is it? </strong>{singleFish.availability.location}</p>
                 <p><strong>Price: </strong>{singleFish.price} Bells (CJ's price: {singleFish['price-cj']} Bells)</p>
                 <p><strong>Rarity: </strong>{singleFish.availability.rarity}</p>  
-
+                <a href={wikiURL}>Learn even more!</a>
 
             </div>
     )} else {return null}

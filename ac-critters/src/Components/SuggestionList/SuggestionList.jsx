@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 export default function SuggestionList(props) {
-
-    // console.log('suggestion list - ', props.wordFromSearch.length)
     
     const [dataObjCrit, setDataObjCrit] = useState("");
     const [dataObjFish, setDataObjFish] = useState("");
@@ -29,11 +27,8 @@ export default function SuggestionList(props) {
         makeApiCall();
     }, []);
 
-    // console.log('dataObjCrit - ', dataObjCrit)
-
 
     const allCrittersValues = Object.values(dataObjCrit).map((element, index) => {
-        // console.log('values element - ', element)
         for (let i=0; i<element['file-name'].length; i++) {
             if (props.wordFromSearch.length === 0 || props.wordFromSearch.length === 1) {
                 return null

@@ -13,12 +13,19 @@
     width: 100vw;
     border-radius: 5px;
     box-shadow: 0px 0px 3px black;
+   
+
+    a {
+        text-decoration: none;
+        color: black;
+      }
 }
 
 .imgBlurb {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column-reverse;
     padding: 0 5vw 0 5vw;
     border-top: 1px solid #E2D2A1;
     border-bottom: 1px solid #E2D2A1;
@@ -32,6 +39,8 @@
      
     }
 }
+
+
 
 
 @media only screen and (min-width: 768px) {
@@ -49,5 +58,24 @@
         width: 80vw;
         margin-left: 10vw;
         margin-bottom: 10vh;
+    }
+
+    .imgBlurb {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 5vw 0 5vw;
+        border-top: 1px solid #E2D2A1;
+        border-bottom: 1px solid #E2D2A1;
+    
+        img {
+            height: 200px;
+        }
+    
+        p {
+            padding: 0 5vw 0 5vw;
+         
+        }
     }
 }

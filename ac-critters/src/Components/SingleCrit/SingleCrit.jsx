@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import months from '../monthData/monthData';
 import './singleCrit.scss';
 
 
@@ -7,12 +6,10 @@ const SingleCrit = props => {
 
     const [singleCrit, setSingleCrit] = useState("");
     const [name, setName] = useState("")
-    // const [monthAr, setMonthAr] = useState("");
-   
-    // console.log('name - ', name['name-USen'])
 
     
     let path = props.location.pathname;
+    let wikiURL = `https://animalcrossing.fandom.com/wiki${path}`
   
 
     useEffect(() => {
@@ -22,7 +19,6 @@ const SingleCrit = props => {
             const json = await response.json();
             setSingleCrit(json);
             setName(json.name);
-            // setMonthAr(json.availability['month-array-northern']);
         }
         makeApiCall();
     },[])
@@ -35,14 +31,6 @@ const SingleCrit = props => {
             splitName[0] = firstLetter
             splitName = splitName.join("")
 
-        // for (let i=0; i<monthAr.length; i++) {
-        //     let keyss = monthAr[i];
-        //     let temp = []
-        //     for (const keyss of Object.keys(months)) {
-        //     } console.log(months[keyss])
-        //     // temp.push(months[keyss])
-        //     // return(temp)
-        // } return (<h1>GOOGB</h1>)
  
     return (
             <div className='singleCritContainer'>
@@ -54,7 +42,8 @@ const SingleCrit = props => {
                 </div>
                 <p><strong>Where is it? </strong> {singleCrit.availability.location}</p>
                 <p><strong>Price: </strong>{singleCrit.price} Bells (Flick's price: {singleCrit['price-flick']} Bells)</p>
-                <p><strong>Rarity: </strong>{singleCrit.availability.rarity}</p>  
+                <p><strong>Rarity: </strong>{singleCrit.availability.rarity}</p> 
+                <a href={wikiURL}>Learn even more!</a> 
             </div>
     )
 } else {return null}

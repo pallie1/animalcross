@@ -6,6 +6,9 @@ div {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        width: 90vw;
+        // padding-left: 5vw;
+        margin-left: 5vw;
     }
 
     .crittersBorder {
