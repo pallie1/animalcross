@@ -27,7 +27,7 @@ const Fish = () => {
             </div>
         )
     })
-    console.log('allFishValues - ', allFishValues)
+    // console.log('allFishValues - ', allFishValues)
             
     return (
         <>

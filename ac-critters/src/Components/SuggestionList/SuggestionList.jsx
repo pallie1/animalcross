@@ -8,23 +8,22 @@ export default function SuggestionList(props) {
     const [dataObjFish, setDataObjFish] = useState("");
 
     useEffect( () => {
-        let allUrl = `https://acnhapi.com/v1/bugs/`;
-        const makeApiCall = async () => {
-            const response = await fetch(allUrl);
-            const json = await response.json();
-            setDataObjCrit(json);
+        let allCritUrl = `https://acnhapi.com/v1/bugs/`;
+        const makeCritApiCall = async () => {
+            const response = await fetch(allCritUrl);
+            const jsonCrit = await response.json();
+            setDataObjCrit(jsonCrit);
         }
-        makeApiCall();
-    }, []);
+        
+        let allFishUrl = `https://acnhapi.com/v1/fish/`;
+        const makeFishApiCall = async () => {
+            const response = await fetch(allFishUrl);
+            const jsonFish = await response.json();
+            setDataObjFish(jsonFish);
+        }
 
-    useEffect( () => {
-        let allUrl = `https://acnhapi.com/v1/fish/`;
-        const makeApiCall = async () => {
-            const response = await fetch(allUrl);
-            const json = await response.json();
-            setDataObjFish(json);
-        }
-        makeApiCall();
+        makeCritApiCall();
+        makeFishApiCall();
     }, []);
 
 

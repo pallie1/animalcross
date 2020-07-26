@@ -9,6 +9,7 @@ const SingleCrit = props => {
 
     
     let path = props.location.pathname;
+    let clonePath = path.split("").splice(9,path.length-1).join("");
     let wikiURL = `https://animalcrossing.fandom.com/wiki${path}`
   
 

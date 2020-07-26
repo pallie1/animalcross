@@ -9,6 +9,7 @@ import './search.scss';
 export default function Search(props) {
     const [input, setInput] = useState("");
 
+
     const handleChange = event => {
         const userInput = event.target.value;
         setInput(userInput);

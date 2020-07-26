@@ -28,7 +28,7 @@ const Critters = () => {
             </div>
         )
     })
-    console.log('allCritersValues - ', allCrittersValues)
+    // console.log('allCritersValues - ', allCrittersValues)
             
     return (
         <>
