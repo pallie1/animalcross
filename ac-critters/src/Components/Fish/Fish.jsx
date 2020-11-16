@@ -20,7 +20,7 @@ const Fish = () => {
 
     const allFishValues = Object.values(dataObjFish).map((element, index) => {
         return (
-            <div  key={index}>
+            <div  key={Math.random(5000)}>
                 <Link to={'/' + element['file-name']}>
                     <div className='critters-border'>
                         <img  src={element.icon_uri} alt={element.name[0]} className={hiddenFish.includes(element.id) ? 'hide critters-border' : 'critters-border' } />
