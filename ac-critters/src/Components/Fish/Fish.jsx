@@ -6,6 +6,7 @@ const Fish = () => {
 
     const [dataObjFish, setDataObjFish] = useState("")
     const [hiddenFish, setHiddenFish] = useState([])
+    const [clicked, setClicked] = useState('')
 
 
     useEffect( () => {
@@ -32,7 +33,7 @@ const Fish = () => {
 
     const listMonths = Object.values(months).map((month, index) => {
         return (
-            <h3 key={index} className='cursor-point' onClick={() => {hideTheseFish(index+1)}}>{month}</h3>
+            <h3 key={index} className={ clicked === index ? 'cursor-point cute-button selected-month' : 'cursor-point cute-button'} onClick={() => {hideTheseFish(index+1)}}>{month}</h3>
         )
     })
         
@@ -47,11 +48,17 @@ const Fish = () => {
             return hideHelperArr
         })
         setHiddenFish(hideHelperArr)
+        setClicked(chosenMonth-1)
+    }
+    
+    const resetState = () => {
+        setHiddenFish([])
+        setClicked('')
     }
             
     return (
         <>
-            <h1 onClick={() => {setHiddenFish([])}}>All Fish!</h1>
+            <h1 className='cursor-point animals-title-margin' onClick={() => {resetState()}}>All Fish!</h1>
             <div className='months-grid'>
                 {listMonths}
             </div>

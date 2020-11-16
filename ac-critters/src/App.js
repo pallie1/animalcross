@@ -22,7 +22,7 @@ const handleSubmit = userWord => {
   return (
     <div className="App">
       <Navbar id='nav' variant="dark" >
-      <Link className='nav-brand' to='/project2reactAllie/'>AC Critters</Link>
+      <Link className='nav-brand' to='/animalcross/'>AC Critters</Link>
         <Nav className="mr-auto">
           <Nav.Item>
             <Link to='/critters'>Critters</Link>
@@ -36,7 +36,7 @@ const handleSubmit = userWord => {
       </Navbar>
       <main>
         <Switch>
-          <Route exact path='/project2reactAllie/' component={Home} />
+          <Route exact path='/animalcross/' component={Home} />
           <Route exact path='/critters' component={Critters} />
           <Route exact path='/fish' component={Fish} />
           <Route 
