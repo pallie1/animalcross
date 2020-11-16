@@ -26,7 +26,6 @@ export default function SuggestionList(props) {
         makeFishApiCall();
     }, []);
 
-
     const allCrittersValues = Object.values(dataObjCrit).map((element, index) => {
         for (let i=0; i<element['file-name'].length; i++) {
             if (props.wordFromSearch.length === 0 || props.wordFromSearch.length === 1) {
@@ -42,7 +41,6 @@ export default function SuggestionList(props) {
             } else return null
         }
     })
-
 
     const allFishValues = Object.values(dataObjFish).map((element, index) => {
         for (let i=0; i<element['file-name'].length; i++) {

@@ -1,19 +1,29 @@
+.all-critters-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin-left: 5vw;
+}
 
+.critters-border {
+  border: 1px solid #2d3b25;
+  background-color: #c6e8c0;
+}
 
-div {
+.hide {
+  border: 1px solid #2d3b25;
+  background-color: #496020;
+  opacity: 0.3;
+}
 
-    .all-critters-grid {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 90vw;
-        // padding-left: 5vw;
-        margin-left: 5vw;
-    }
+.cursor-point {
+  display: block;
+  cursor: pointer;
+}
 
-    .crittersBorder {
-        border: 1px solid #496020;
-        background-color: #c6e8c0;
-    }
-
+.months-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
 }

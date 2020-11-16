@@ -5,10 +5,8 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import './search.scss';
 
-
 export default function Search(props) {
     const [input, setInput] = useState("");
-
 
     const handleChange = event => {
         const userInput = event.target.value;

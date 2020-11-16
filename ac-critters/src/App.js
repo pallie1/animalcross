@@ -16,7 +16,6 @@ function App() {
 const [wordFromSearch, setWordFromSearch] = useState("");
 
 const handleSubmit = userWord => {
-  // console.log('userword form app -', userWord)
   setWordFromSearch(userWord)
 } 
 
