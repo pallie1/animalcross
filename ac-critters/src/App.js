@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Search from './Components/Search/Search';
 import Home from './Components/Home/Home'
 import AllAnimalsDisplay from './Components/AllAnimalsDisplay/AllAnimalsDisplay';
-import SingleCrit from './Components/SingleCrit/SingleCrit';
-import SingleFish from './Components/SingleFish/SingleFish';
+import SingleAnimal from './Components/SingleAnimal/SingleAnimal';
 import SuggestionList from './Components/SuggestionList/SuggestionList';
 import { Switch, Route, Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
@@ -41,15 +40,9 @@ const handleSubmit = userWord => {
           <Route 
            exact path='/search' 
           render={routerProps => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
-
           <Route 
           exact path='/:singlePath' 
-          render={ routerProps => 
-            <> 
-              <SingleCrit {...routerProps} />  
-              <SingleFish {...routerProps} /> 
-            </> 
-          }/>          
+          render={ routerProps => <SingleAnimal {...routerProps} />} />          
         </Switch>
       </main>
     </div>
