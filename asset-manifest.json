@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/animalcross/static/css/main.d0791e35.chunk.css",
-    "main.js": "/animalcross/static/js/main.e22a0a6a.chunk.js",
-    "main.js.map": "/animalcross/static/js/main.e22a0a6a.chunk.js.map",
+    "main.js": "/animalcross/static/js/main.196c19df.chunk.js",
+    "main.js.map": "/animalcross/static/js/main.196c19df.chunk.js.map",
     "runtime-main.js": "/animalcross/static/js/runtime-main.13363b16.js",
     "runtime-main.js.map": "/animalcross/static/js/runtime-main.13363b16.js.map",
-    "static/js/2.fa7d3427.chunk.js": "/animalcross/static/js/2.fa7d3427.chunk.js",
-    "static/js/2.fa7d3427.chunk.js.map": "/animalcross/static/js/2.fa7d3427.chunk.js.map",
+    "static/js/2.40ffac1e.chunk.js": "/animalcross/static/js/2.40ffac1e.chunk.js",
+    "static/js/2.40ffac1e.chunk.js.map": "/animalcross/static/js/2.40ffac1e.chunk.js.map",
     "index.html": "/animalcross/index.html",
-    "precache-manifest.a6cbcd83be52de18deb96669bea6f921.js": "/animalcross/precache-manifest.a6cbcd83be52de18deb96669bea6f921.js",
+    "precache-manifest.ec06eb04d53722fb038ef4e20ece2197.js": "/animalcross/precache-manifest.ec06eb04d53722fb038ef4e20ece2197.js",
     "service-worker.js": "/animalcross/service-worker.js",
     "static/css/main.d0791e35.chunk.css.map": "/animalcross/static/css/main.d0791e35.chunk.css.map",
-    "static/js/2.fa7d3427.chunk.js.LICENSE.txt": "/animalcross/static/js/2.fa7d3427.chunk.js.LICENSE.txt"
+    "static/js/2.40ffac1e.chunk.js.LICENSE.txt": "/animalcross/static/js/2.40ffac1e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.13363b16.js",
-    "static/js/2.fa7d3427.chunk.js",
+    "static/js/2.40ffac1e.chunk.js",
     "static/css/main.d0791e35.chunk.css",
-    "static/js/main.e22a0a6a.chunk.js"
+    "static/js/main.196c19df.chunk.js"
   ]
 }
