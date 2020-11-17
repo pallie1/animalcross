@@ -34,7 +34,7 @@ export default function SuggestionList(props) {
                 return (
                     <div  key={index}>
                         <Link to={'/' + element['file-name']}>
-                            <img  src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
+                            <img  src={element.icon_uri} alt={element.name[0]} className='critters-border' />
                         </Link>
                     </div>
                     )
@@ -50,7 +50,7 @@ export default function SuggestionList(props) {
                 return (
                     <div  key={index}>
                         <Link to={'/' + element['file-name']}>
-                            <img  src={element.icon_uri} alt={element.name[0]} className='crittersBorder' />
+                            <img  src={element.icon_uri} alt={element.name[0]} className='critters-border' />
                         </Link>
                     </div>
                     )

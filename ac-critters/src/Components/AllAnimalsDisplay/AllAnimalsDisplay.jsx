@@ -15,16 +15,16 @@ const AllAnimalsDisplay = (props) => {
     }
 
     useEffect( () => {
-        let allUrl = `https://acnhapi.com/v1${followedPath}`;
+        let allUrl = `https://acnhapi.com/v1${followedPath}`
         const makeApiCall = async () => {
-            const response = await fetch(allUrl);
-            const json = await response.json();
-            setDataObjAnimals(json);
+            const response = await fetch(allUrl)
+            const json = await response.json()
+            setDataObjAnimals(json)
         }
-        makeApiCall();
-    }, [followedPath]);
+        makeApiCall()
+    }, [followedPath])
 
-    const allAnimalValues = Object.values(dataObjAnimals).map((element, index) => {
+    const allAnimalValues = Object.values(dataObjAnimals).map(element => {
         return (
             <div  key={Math.random(5000)}>
                 <Link to={'/' + element['file-name']}>
