@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff215d073dc8ddaf84e630624258455b",
+    "revision": "df6a049cdb45d14af8173ba9392a5c13",
     "url": "/animalcross/index.html"
   },
   {
-    "revision": "3668ada1a491ad73024d",
+    "revision": "828ca39d89f3e4784f29",
     "url": "/animalcross/static/css/main.d0791e35.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/animalcross/static/js/2.40ffac1e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3668ada1a491ad73024d",
-    "url": "/animalcross/static/js/main.196c19df.chunk.js"
+    "revision": "828ca39d89f3e4784f29",
+    "url": "/animalcross/static/js/main.db516ea0.chunk.js"
   },
   {
     "revision": "2901f0af4e9c81f39c05",
