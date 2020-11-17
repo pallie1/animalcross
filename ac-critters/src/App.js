@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Search from './Components/Search/Search';
 import Home from './Components/Home/Home'
-import Critters from './Components/Critters/Critters';
-import Fish from './Components/Fish/Fish';
+import AllAnimalsDisplay from './Components/AllAnimalsDisplay/AllAnimalsDisplay';
 import SingleCrit from './Components/SingleCrit/SingleCrit';
 import SingleFish from './Components/SingleFish/SingleFish';
 import SuggestionList from './Components/SuggestionList/SuggestionList';
@@ -37,8 +36,8 @@ const handleSubmit = userWord => {
       <main>
         <Switch>
           <Route exact path='/animalcross/' component={Home} />
-          <Route exact path='/critters' component={Critters} />
-          <Route exact path='/fish' component={Fish} />
+          <Route exact path='/critters' render={routerProps => <AllAnimalsDisplay {...routerProps} />} />
+          <Route exact path='/fish' render={routerProps => <AllAnimalsDisplay {...routerProps} />} />
           <Route 
            exact path='/search' 
           render={routerProps => <SuggestionList wordFromSearch={wordFromSearch} {...routerProps} />} />
