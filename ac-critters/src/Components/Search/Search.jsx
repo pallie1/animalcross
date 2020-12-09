@@ -22,10 +22,10 @@ export default function Search(props) {
     return (
         <>
             <Link to='/search' className='noUnderline'>
-                <Form inline  >
+                <Form inline  className='search-form-mobile'>
                     <FormControl 
                     type="text" 
-                    placeholder="Find a critter" 
+                    placeholder="Find an animal" 
                     className="mr-sm-2" 
                     value={input} 
                     onChange={handleChange} 

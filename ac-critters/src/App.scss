@@ -1,5 +1,4 @@
 @import "~bootstrap/scss/bootstrap";
-
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=IBM+Plex+Sans:wght@300;500&family=Open+Sans');
 
 .App {
@@ -43,4 +42,53 @@ h1 {
 .nav-brand {
   font-family: 'Bree Serif', serif;
   font-size: 20px;
+}
+
+.small-page-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 750px)  {
+
+  #nav {
+    display: none;
+  }
+
+ .small-page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #1f6317;
+  box-shadow: 0 8px 6px -6px black;
+
+  a, i {
+    text-decoration: none;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+ }
+
+ .mobile-nav-open {
+   height: 100vh;
+   width: 100vw;
+   background-color: #1f6317;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+ }
+
+ .small-search {
+   width: 90%;
+ }
+
+ .mobile-nav-text.mobile-nav-text {
+   font-size: 2rem;
+   color: white;
+   text-decoration: none;
+ }
+
 }

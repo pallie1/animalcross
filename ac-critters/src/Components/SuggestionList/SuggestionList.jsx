@@ -32,11 +32,9 @@ export default function SuggestionList(props) {
                 return null
             } else if (element['file-name'].indexOf(props.wordFromSearch) > -1) {
                 return (
-                    <div  key={index}>
-                        <Link to={'/' + element['file-name']}>
-                            <img  src={element.icon_uri} alt={element.name[0]} className='critters-border' />
-                        </Link>
-                    </div>
+                    <Link to={'/' + element['file-name']} key={index}>
+                        <img  src={element.icon_uri} alt={element.name[0]} className='critters-border' />
+                    </Link>
                     )
             } else return null
         }
@@ -48,11 +46,9 @@ export default function SuggestionList(props) {
                 return null
             } else if (element['file-name'].indexOf(props.wordFromSearch) > -1) {
                 return (
-                    <div  key={index}>
-                        <Link to={'/' + element['file-name']}>
-                            <img  src={element.icon_uri} alt={element.name[0]} className='critters-border' />
-                        </Link>
-                    </div>
+                    <Link to={'/' + element['file-name']} key={index}>
+                        <img  src={element.icon_uri} alt={element.name[0]} className='critters-border' />
+                    </Link>
                     )
             } else return null
         }

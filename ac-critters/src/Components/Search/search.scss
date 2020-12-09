@@ -3,3 +3,14 @@
         text-decoration: none;
     }
 }
+
+@media only screen and (max-width: 750px)  {
+    .search-form-mobile {
+        display: flex;
+        justify-content: center;
+
+        button {
+            margin: 20px;
+        }
+    }
+}
