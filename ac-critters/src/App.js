@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Search from "./Components/Search/Search";
 import Home from "./Components/Home/Home";
 import AllAnimalsDisplay from "./Components/AllAnimalsDisplay/AllAnimalsDisplay";
-import SingleAnimal from "./Components/SingleAnimal/SingleAnimal";
+import SingleAnimal from './Components/SingleAnimal/SingleAnimal'
 import SuggestionList from "./Components/SuggestionList/SuggestionList";
 import { Switch, Route, Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
